@@ -1,14 +1,21 @@
 
-<img src="./.github/assets/celestial-bodies.png" alt="Celestial Bodies" width="100%" />
+<p align="center" style="text-align: center">
+	<img src="./.github/assets/celestial-bodies.png" alt="Celestial Bodies" width="35%" />
+</p>
+
+<p align="center" style="text-align: center">
+
+<em> #### :card_file_box: Lightweight wrapper for NASA's API library.  </em>
+
+</p>
+<p align="center" style="text-align: center">
 
 [![Development Status](https://img.shields.io/static/v1?label=status&message=Active&nbsp;Development&color=blue&style=flat-square&?logo=open-source-initiative&logoColor=ffffff)](#) [![Version](https://img.shields.io/github/v/release/hieronymous-bean/celestial-bodies?include_prereleases&style=flat-square)](#) [![Issues](https://img.shields.io/github/issues-raw/hieronymous-bean/celestial-bodies?style=flat-square)](#)
-[![License](https://img.shields.io/github/license/hieronymous-bean/exemplar?style=flat-square)](#)
+[![License](https://img.shields.io/github/license/hieronymous-bean/exemplar?style=flat-square)](#) [![built with gulp](https://img.shields.io/badge/gulp-builds_this_project-eb4a4b.svg?logo=data%3Aimage%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAAAYAAAAOCAMAAAA7QZ0XAAAABlBMVEUAAAD%2F%2F%2F%2Bl2Z%2FdAAAAAXRSTlMAQObYZgAAABdJREFUeAFjAAFGRjSSEQzwUgwQkjAFAAtaAD0Ls2nMAAAAAElFTkSuQmCC&style=flat-square)](http://gulpjs.com/)
 
+</p>
 
-
-[![built with gulp](https://img.shields.io/badge/gulp-builds_this_project-eb4a4b.svg?logo=data%3Aimage%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAAAYAAAAOCAMAAAA7QZ0XAAAABlBMVEUAAAD%2F%2F%2F%2Bl2Z%2FdAAAAAXRSTlMAQObYZgAAABdJREFUeAFjAAFGRjSSEQzwUgwQkjAFAAtaAD0Ls2nMAAAAAElFTkSuQmCC&style=flat-square)](http://gulpjs.com/)
-
-#### :card_file_box: Lightweight wrapper for NASA's API library. 
+ 
 
 ## Introduction
 Celestial Bodies is a lightweight wrapper for NASA's API library. 
@@ -32,10 +39,8 @@ Mostly for my own documentation through development, Celestial Bodies currently 
 
 Focus                             |  Tool(s)
 ----------------------------------|------------------------------------------------------------------------------------
-Syntax                            | Typescript
-Compiler                          | Babel
+Syntax                            | Javascript
 Build Automation                  | Gulp
-Testing                           | Mocha + Chai
 
 ## Installation
 
