@@ -8,7 +8,7 @@
 
 [![built with gulp](https://img.shields.io/badge/gulp-builds_this_project-eb4a4b.svg?logo=data%3Aimage%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAAAYAAAAOCAMAAAA7QZ0XAAAABlBMVEUAAAD%2F%2F%2F%2Bl2Z%2FdAAAAAXRSTlMAQObYZgAAABdJREFUeAFjAAFGRjSSEQzwUgwQkjAFAAtaAD0Ls2nMAAAAAElFTkSuQmCC&style=flat-square)](http://gulpjs.com/)
 
-#### :card_file_box: Lightweight XML - JSON converter. 
+#### :card_file_box: Lightweight wrapper for NASA's API library. 
 
 ## Introduction
 Celestial Bodies is a lightweight wrapper for NASA's API library. 

@@ -6,7 +6,10 @@
     "type": "git",
     "url": "https://github.com/hieronymous-bean/celestial-bodies.git"
   },
-  "keywords": ["celestial-bodies","nasa"],
+  "keywords": [
+    "celestial-bodies",
+    "nasa"
+  ],
   "author": "jeffreyallanbrown",
   "license": "",
   "bugs": {
@@ -18,7 +21,9 @@
   },
   "main": "index.js",
   "dependencies": {
-    "@babel/polyfill": "^7.12.1"
+    "@babel/polyfill": "^7.12.1",
+    "axios": "^0.21.0",
+    "express": "^4.17.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.12.1",
