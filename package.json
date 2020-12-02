@@ -1,0 +1,40 @@
+{
+  "name": "celestial-bodies",
+  "version": "v0.0.0",
+  "description": "Lightweight wrapper for interacting with NASA's API library.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hieronymous-bean/celestial-bodies.git"
+  },
+  "keywords": ["celestial-bodies","nasa"],
+  "author": "jeffreyallanbrown",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/hieronymous-bean/celestial-bodies/issues"
+  },
+  "homepage": "https://github.com/hieronymous-bean/celestial-bodies",
+  "directories": {
+    "lib": "lib"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sourcemaps": "^2.6.5"
+  },
+  "scripts": {
+    "setup": "npm install && npm run build",
+    "build": "gulp default",
+    "start": "node app"
+  }
+}
