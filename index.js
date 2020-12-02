@@ -7,10 +7,16 @@ const api = require('./lib/index.js');
 app.use(express.json()) // for parsing application/json
 app.use(express.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
 
-app.get('/apod', function (req, res, next) {
-    const apodValue = api.apod('ofmobU4wrsnPlHaeSQUngj5xgofeEvZ8Hf0SE81X','','');
-    console.log(apodValue);
-    res.sendStatus(200);
+app.get('/apod', function (response) {
+	const parameters = {
+		key: '',
+		date: '',
+		hd: ''
+	};
+    api.apod(parameters, function(response) {
+    	console.log(response);
+    });
+    return;
 });
 
 app.listen(port, () => {
