@@ -9,15 +9,16 @@ app.use(express.urlencoded({ extended: true })) // for parsing application/x-www
 
 app.get('/apod', function (response) {
 	const parameters = {
-		key: '',
-		date: '',
-		hd: ''
+		key: 'ofmobU4wrsnPlHaeSQUngj5xgofeEvZ8Hf0SE81X',
+		date: '2020-11-20',
+		hd: 'false'
 	};
     api.apod(parameters, function(response) {
-    	console.log(response);
+		console.log(response);
+		return 200;
     });
-    return;
 });
+
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
