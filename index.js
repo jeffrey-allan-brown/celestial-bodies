@@ -10,8 +10,7 @@ const parameters = {
 
 http.createServer(function (req, res) {
 	const apiCall = api.apod(parameters, function(response) {
-  		return response;
+  		console.log(response);
 	});
-	console.log(apiCall)
   	res.writeHead(200, {'Content-Type': 'text/html'});
 }).listen(port, () => {console.log(`Celestial Bodies is listening at http://localhost:${port}`)}); 
