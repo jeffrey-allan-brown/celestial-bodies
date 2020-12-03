@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="300px" src="./.github/assets/celestial-bodies.png" alt="Celestial Bodies">
+  <img src="./.github/assets/celestial-bodies.png" alt="Celestial Bodies">
 </p>
 
 <p align="center">
@@ -30,7 +30,8 @@ Celestial Bodies is a lightweight wrapper for NASA's API library.
 
 ## Table of Contents
 
-- [System Requirements](#system-requirements)
+<a href="#system-requirements" style="font-weight: bold !imporant; color: #171A5B !imporant;">System Requirements</a>
+
 - [Installation](#installation)
 - [Configuration](#configuration)
 - [Usage](#usage)
