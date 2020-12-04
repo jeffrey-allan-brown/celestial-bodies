@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="#">
-    <img src="https://img.shields.io/static/v1?label=status&message=Active&nbsp;Development&color=blue&style=flat-square&?logo=open-source-initiative&logoColor=ffffff">
+    <img src="https://img.shields.io/static/v1?label=status&message=Active%20Development&color=blue&style=flat-square&?logo=open-source-initiative&logoColor=ffffff">
   </a>
   <a href="#">
     <img src="https://img.shields.io/github/v/release/hieronymous-bean/celestial-bodies?include_prereleases&style=flat-square">
@@ -25,20 +25,23 @@
 
 
 
+
+
 ## Introduction
 Celestial Bodies is a lightweight wrapper for NASA's API library. 
+
+
+
 
 ## Table of Contents
 
 :new_moon: <a href="#system-requirements">System Requirements</a>
-
 :waxing_crescent_moon: <a href="#installation">Installation</a>
-
 :crescent_moon: <a href="#usage">Usage</a>
-
 :moon: <a href="#contributing">Contributing</a>
-
 :full_moon: <a href="#credits">Credits</a>
+
+
 
 ## System Requirements
 
@@ -46,6 +49,7 @@ At its core, Celestial Bodies relies on Node.js and NPM for its core functionali
 
 - Node.js ~14.15.1
 - NPM ~6.14.8
+
 
 ## Installation
 
@@ -59,23 +63,45 @@ Require the package to access the preconfigured API functions.
 const celestial = require('celestial-bodies');
 ```
 
-#### APOD
-The APOD function is used to leverage the Astronomy Picture of the Day API. 
-The payload object is configurable, but only the API Key parameter is required. You can include personal API key or leave as DEMO_KEY and it will still work.
-If not specified, date defaults to *today* and hd defaults to false. 
+Before using Celestial Bodies, you'll want to configure the values of the `payload` object to include the information you want to pass to the API. There is a single global payload object which contains configurations for all of the API calls together, as opposed to having a separate object for each request.
 
 ```js
 const payload = {
-  key: 'DEMO_KEY',
-  date: '',
-  hd: ''
+  global: {
+    key: 'DEMO_KEY', // required - can include personal API key or leave as DEMO_KEY and it will still work, but it at least needs to contain a value.
+  },
+  apod: {
+    date: '', // optional - will default to today if no value provided. Format needs to be YYYY-MM-DD.
+    hd: '' // optional - defaults to false. Change to `true` to have the API return a high-resolution endpoint.
+  },
+  asteroids: {
+    start_date: '', // optional - will default to today if no value provided. Format needs to be YYYY-MM-DD. 
+    end_date: '' // optional - will default to seven days after today if no value provided. Format needs to be YYYY-MM-DD.
+  },
 };
+```
 
+
+#### APOD
+The `apod()` function is used to leverage the Astronomy Picture of the Day API. 
+The returned payload is stored in the `response` variable.
+
+```js
 celestial.apod(payload, response => {
-  console.log(response);
+  return response;
 });
 ```
 
+
+
+
+#### Asteroids
+The `asteroids()` function provides access to NASA's Near Earth Object Web Service. 
+
+```js
+celestial.asteroids(payload, response => {
+  return response;
+});
 
 
 
