@@ -30,19 +30,17 @@ Celestial Bodies is a lightweight wrapper for NASA's API library.
 
 ## Table of Contents
 
-<a href="#system-requirements" style="font-weight: bold !imporant; color: #171A5B !imporant;">System Requirements</a>
+:new_moon: <a href="#system-requirements">System Requirements</a>
 
-- [Installation](#installation)
-- [Usage](#usage)
-- [Roles & Permissions](#roles--permissions)
-- [Features](#features)
-- [Updates](#updates)
-- [Contributing](#contributing)
-- [License](#license)
-- [Credits](#credits)
+:waxing_crescent_moon: <a href="#installation">Installation</a>
+
+:crescent_moon: <a href="#usage">Usage</a>
+
+:moon: <a href="#contributing">Contributing</a>
+
+:full_moon: <a href="#credits">Credits</a>
 
 ## System Requirements
-
 
 At its core, Celestial Bodies relies on Node.js and NPM for its core functionality. 
 
@@ -55,13 +53,13 @@ At its core, Celestial Bodies relies on Node.js and NPM for its core functionali
 npm install celestial-bodies
 ```
 
-## Usage
+## :artificial_satellite: Usage
 Require the package to access the preconfigured API functions.
 ```
 const celestial = require('celestial-bodies');
 ```
 
-##### APOD
+#### APOD
 The APOD function is used to leverage the Astronomy Picture of the Day API. 
 The payload object is configurable, but only the API Key parameter is required. You can include personal API key or leave as DEMO_KEY and it will still work.
 If not specified, date defaults to *today* and hd defaults to false. 
@@ -79,21 +77,21 @@ celestial.apod(payload, response => {
 ```
 
 
-## Features
 
-In development
-
-## Updates
-
-In development
 
 ## Contributing
 
-In development
+Contributions are welcome - feel free to submit a pull request and it will be reviewed promptly. 
 
 ## Credits
 
-In development
+##### Assets
+Logo - <a href="https://looka.com/">Looka.com</a>
+
+##### Packages
+<a href="https://github.com/axios/axios">Axios</a>
+
+## Bonus
 
 <a href="https://www.buymeacoffee.com/hieronymousbean" target="_blank">
     <img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" >
