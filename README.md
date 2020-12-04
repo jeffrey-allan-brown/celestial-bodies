@@ -33,7 +33,6 @@ Celestial Bodies is a lightweight wrapper for NASA's API library.
 <a href="#system-requirements" style="font-weight: bold !imporant; color: #171A5B !imporant;">System Requirements</a>
 
 - [Installation](#installation)
-- [Configuration](#configuration)
 - [Usage](#usage)
 - [Roles & Permissions](#roles--permissions)
 - [Features](#features)
@@ -44,24 +43,40 @@ Celestial Bodies is a lightweight wrapper for NASA's API library.
 
 ## System Requirements
 
-Mostly for my own documentation through development, Celestial Bodies currently utilizes the following application infrastructure:
 
-Focus                             |  Tool(s)
-----------------------------------|------------------------------------------------------------------------------------
-Syntax                            | Javascript
-Build Automation                  | Gulp
+At its core, Celestial Bodies relies on Node.js and NPM for its core functionality. 
+
+- Node.js ~14.15.1
+- NPM ~6.14.8
 
 ## Installation
 
-In development
-
-## Configuration
-
-In development
+```
+npm install celestial-bodies
+```
 
 ## Usage
+Require the package to access the preconfigured API functions.
+```
+const celestial = require('celestial-bodies');
+```
 
-In development
+##### APOD
+The APOD function is used to leverage the Astronomy Picture of the Day API. 
+The payload object is configurable, but only the API Key parameter is required. You can include personal API key or leave as DEMO_KEY and it will still work.
+If not specified, date defaults to *today* and hd defaults to false. 
+
+```js
+const payload = {
+  key: 'DEMO_KEY',
+  date: '',
+  hd: ''
+};
+
+celestial.apod(payload, response => {
+  console.log(response);
+});
+```
 
 
 ## Features
