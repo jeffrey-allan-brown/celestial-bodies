@@ -1,13 +1,13 @@
 {
   "name": "celestial-bodies",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Lightweight wrapper for interacting with NASA's API library.",
   "repository": {
     "type": "git",
     "url": "https://github.com/hieronymous-bean/celestial-bodies.git"
   },
   "publishConfig": {
-    "registry":"https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com"
   },
   "keywords": [
     "celestial-bodies",
@@ -29,9 +29,7 @@
     "axios": "^0.21.0",
     "body-parser": "^1.19.0"
   },
-  "devDependencies": {
-
-  },
+  "devDependencies": {},
   "scripts": {
     "setup": "npm install && npm run build",
     "build": "gulp default",
