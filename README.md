@@ -102,7 +102,7 @@ The `asteroids()` function provides access to NASA's Near Earth Object Web Servi
 celestial.asteroids(payload, response => {
   return response;
 });
-
+```
 
 
 ## Contributing
