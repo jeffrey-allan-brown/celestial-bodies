@@ -65,18 +65,26 @@ const celestial = require('celestial-bodies');
 
 Before using Celestial Bodies, you'll want to configure the values of the `payload` object to include the information you want to pass to the API. There is a single global payload object which contains configurations for all of the API calls together, as opposed to having a separate object for each request.
 
+The `key` value is required for all calls. You can leave it as `DEMO_KEY` and the functions will still work as intended, but the API call limitations will be stricter. Otherwise, request a free API code from NASA's website and use that as the key value (recommended).
+
 ```js
 const payload = {
   global: {
-    key: 'DEMO_KEY', // required - can include personal API key or leave as DEMO_KEY and it will still work, but it at least needs to contain a value.
+    key: 'DEMO_KEY',
   },
   apod: {
-    date: '', // optional - will default to today if no value provided. Format needs to be YYYY-MM-DD.
-    hd: '' // optional - defaults to false. Change to `true` to have the API return a high-resolution endpoint.
+    date: '',
+    hd: ''
   },
   asteroids: {
-    start_date: '', // optional - will default to today if no value provided. Format needs to be YYYY-MM-DD. 
-    end_date: '' // optional - will default to seven days after today if no value provided. Format needs to be YYYY-MM-DD.
+    requestType: 'browse', // specify whether the call is for the data feed or object lookup. Expecting `feed`, `lookup`, or 'browse'
+    feed: {
+      start_date: '', // optional - will default to today if no value provided. Format needs to be YYYY-MM-DD. 
+      end_date: '' // optional - will default to seven days after today if no value provided. Format needs to be YYYY-MM-DD.
+    },
+    lookup: {
+      id: '2465633' // required if passing `lookup` in requestType value.
+    }
   },
 };
 ```
@@ -84,7 +92,9 @@ const payload = {
 
 #### APOD
 The `apod()` function is used to leverage the Astronomy Picture of the Day API. 
-The returned payload is stored in the `response` variable.
+The `Date` parameter specifies the date for the returned image. Date will default to `today` if empty, and is expecting the YYYY-MM-DD format.
+HD expects a boolean value, and is used to indicate whether an high-resolution image should be displayed. Defaults to `false` if no value provided.
+
 
 ```js
 celestial.apod(payload, response => {
@@ -96,7 +106,8 @@ celestial.apod(payload, response => {
 
 
 #### Asteroids
-The `asteroids()` function provides access to NASA's Near Earth Object Web Service. 
+The `asteroids()` function provides access to NASA's Near Earth Object Web Service. This call has three separate modes - ``feed``, ``lookup``, and ``browse``. 
+These mode values are passed in through ``asteroids.requestType`` parameter. 
 
 ```js
 celestial.asteroids(payload, response => {
@@ -111,11 +122,11 @@ Contributions are welcome - feel free to submit a pull request and it will be re
 
 ## Credits
 
-##### Assets
-Logo - <a href="https://looka.com/">Looka.com</a>
-
-##### Packages
+##### Core Packages
 <a href="https://github.com/axios/axios">Axios</a>
+
+##### Misc. Assets
+<a href="https://looka.com/">Looka</a>
 
 ## Bonus
 
