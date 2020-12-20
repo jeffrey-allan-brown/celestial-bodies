@@ -20,14 +20,11 @@ const payload = {
   },
 };
 
-
 /*
 celestial.apod(payload, response => {
   console.log(response);
 });
 */
-
-
 
 celestial.asteroids(payload, response => {
   console.log(response);
