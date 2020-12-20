@@ -1,12 +1,10 @@
-# See http://help.github.com/ignore-files/ for more about ignoring files.
-7d47b1e2-8e4e-4795-be54-0c89a3818416
+
 # compiled output
 /dist
 /tmp
 /out-tsc
 # Only exists if Bazel was run
 /bazel-out
-index-dev.js
 # dependencies
 /node_modules
 

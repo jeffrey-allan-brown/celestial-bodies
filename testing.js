@@ -27,8 +27,6 @@ celestial.apod(payload, response => {
 });
 */
 
-
-
 celestial.asteroids(payload, response => {
   console.log(response);
 });

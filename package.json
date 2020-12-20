@@ -7,11 +7,7 @@
     "url": "https://github.com/hieronymous-bean/celestial-bodies.git"
   },
   "publishConfig": {
-<<<<<<< HEAD
-    "registry": "https://npm.pkg.github.com"
-=======
     "registry": "https://registry.npmjs.org/"
->>>>>>> 6f1c74bd6465065dca2cc005bb3878a603ee7a34
   },
   "keywords": [
     "celestial-bodies",
@@ -31,11 +27,7 @@
   "main": "index.js",
   "dependencies": {
     "axios": "^0.21.0",
-<<<<<<< HEAD
-    "body-parser": "^1.19.0"
-=======
     "validator": "^13.5.1"
->>>>>>> 6f1c74bd6465065dca2cc005bb3878a603ee7a34
   },
   "devDependencies": {},
   "scripts": {
