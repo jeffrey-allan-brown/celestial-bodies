@@ -28,7 +28,7 @@
 
 
 ## Introduction
-Celestial Bodies is a lightweight wrapper for NASA's API library. 
+Celestial Bodies is a lightweight wrapper for NASA's API library.
 
 
 
@@ -63,32 +63,9 @@ Require the package to access the preconfigured API functions.
 const celestial = require('celestial-bodies');
 ```
 
-Before using Celestial Bodies, you'll want to configure the values of the `payload` object to include the information you want to pass to the API. There is a single global payload object which contains configurations for all of the API calls together, as opposed to having a separate object for each request.
+Each API function takes a `payload` object which includes the necessary data to process the request. 
 
 The `key` value is required for all calls. You can leave it as `DEMO_KEY` and the functions will still work as intended, but the API call limitations will be stricter. Otherwise, request a free API code from NASA's website and use that as the key value (recommended).
-
-```js
-const payload = {
-  global: {
-    key: 'DEMO_KEY',
-  },
-  apod: {
-    date: '',
-    hd: ''
-  },
-  asteroids: {
-    requestType: 'browse', // specify whether the call is for the data feed or object lookup. Expecting `feed`, `lookup`, or 'browse'
-    feed: {
-      start_date: '', // optional - will default to today if no value provided. Format needs to be YYYY-MM-DD. 
-      end_date: '' // optional - will default to seven days after today if no value provided. Format needs to be YYYY-MM-DD.
-    },
-    lookup: {
-      id: '2465633' // required if passing `lookup` in requestType value.
-    }
-  },
-};
-```
-
 
 #### APOD
 The `apod()` function is used to leverage the Astronomy Picture of the Day API. 
@@ -97,6 +74,12 @@ HD expects a boolean value, and is used to indicate whether an high-resolution i
 
 
 ```js
+const payload = {
+  key: 'DEMO_KEY',
+  date: '',
+  hd: ''
+};
+
 celestial.apod(payload, response => {
   return response;
 });
