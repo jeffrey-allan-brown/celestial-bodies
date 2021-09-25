@@ -44,4 +44,5 @@ testem.log
 Thumbs.db
 
 # misc
+.env
 .testing.js
