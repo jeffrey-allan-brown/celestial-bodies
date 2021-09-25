@@ -27,6 +27,7 @@
   "main": "index.js",
   "dependencies": {
     "axios": "^0.21.0",
+    "joi": "^17.4.2",
     "validator": "^13.5.1"
   },
   "devDependencies": {},
