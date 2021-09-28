@@ -1,12 +1,11 @@
 const celestial = require('./index.js');
 
 const payload = {
+  asteroid_id: 3471590,
   key: 'DEMO_KEY',
-  startDate: '2021-08-31',
-  endDate: '2021-09-01'
+  type: 'browse'
 };
 
-
-celestial.apod(payload, response => {
-  console.log(response);
+celestial.asteroids(payload, asteroids => {
+  console.log(asteroids);
 });

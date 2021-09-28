@@ -47,8 +47,8 @@
 
   At its core, Celestial Bodies relies on Node.js and NPM for its core functionality. 
 
-  - Node.js ~14.15.1
-  - NPM ~6.14.8
+  - Node ^14
+  - NPM ^6
 
 
   ## Installation
@@ -86,8 +86,8 @@
     hd: ''
   };
 
-  celestial.apod(payload, response => {
-    return response;
+  celestial.apod(payload, pictureOfTheDay => {
+    return pictureOfTheDay;
   });
   ```
 
@@ -96,11 +96,51 @@
 
   #### Asteroids
   The `asteroids()` function provides access to NASA's Near Earth Object Web Service. This call has three separate modes - ``feed``, ``lookup``, and ``browse``. 
-  These mode values are passed in through ``asteroids.requestType`` parameter. 
+
+  ##### Feed
+  For this mode, provide your `key` in the request along with the `start_date` and `end_date` for the range of dates you would like results for. This range can be no more than seven days.
 
   ```js
-  celestial.asteroids(payload, response => {
-    return response;
+  const payload = {
+    end_date: '2021-01-01',
+    key: 'DEMO_KEY',
+    start_date: '2021-01-02',
+    type: 'feed'
+  };
+
+  celestial.apod(payload, asteroid => {
+    return asteroid;
+  });
+  ```
+
+  ##### Lookup
+  In addition to your `key`, you need to provide the request with the `asteroid_id`, which is the id of the asteroid you're looking up. 
+
+  ```js
+  const payload = {
+    asteroid_id: 3471590,
+    key: 'DEMO_KEY',
+    type: 'lookup'
+  };
+
+  celestial.apod(payload, asteroid => {
+    return asteroid;
+  });
+  ```
+
+  ##### Browse
+  This mode doesn't require any parameters aside from the api key. 
+
+  These mode values are passed in through `type` payload parameter. 
+
+  ```js
+  const payload = {
+    key: 'DEMO_KEY',
+    type: 'browse'
+  };
+
+  celestial.apod(payload, asteroid => {
+    return asteroid;
   });
   ```
 
