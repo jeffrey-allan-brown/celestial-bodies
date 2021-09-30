@@ -21,7 +21,7 @@
     <br>
   </p>
 
-  <p align="center">:rocket: Lightweight wrapper for NASA's API library.</p>
+  <p align="center">:rocket: &nbsp; &nbsp; Lightweight wrapper for NASA's API library.</p>
 
 
 
@@ -35,11 +35,11 @@
 
   ## Table of Contents
 
-  :new_moon: <a href="#system-requirements">System Requirements</a>
-  :waxing_crescent_moon: <a href="#installation">Installation</a>
-  :crescent_moon: <a href="#usage">Usage</a>
-  :moon: <a href="#contributing">Contributing</a>
-  :full_moon: <a href="#credits">Credits</a>
+  :new_moon:  &nbsp; <a href="#system-requirements">System Requirements</a> &nbsp; | &nbsp;
+  :waxing_crescent_moon:  &nbsp; <a href="#installation">Installation</a>  &nbsp; | &nbsp;
+  :crescent_moon:  &nbsp; <a href="#usage">Usage</a>  &nbsp; | &nbsp;
+  :moon:  &nbsp; <a href="#contributing">Contributing</a>  &nbsp; | &nbsp;
+  :full_moon:  &nbsp; <a href="#credits">Credits</a>
 
 
 
@@ -57,38 +57,40 @@
   npm install celestial-bodies
   ```
 
-  ## :artificial_satellite: Usage
+  ## :artificial_satellite: &nbsp; Usage
   Require the package to access the preconfigured API functions.
-  ```
+
+  ```js
   const celestial = require('celestial-bodies');
   ```
 
-  Each API function takes a `payload` object which includes the necessary data to process the request. 
+  Each API function takes a `payload` object which includes the necessary data to process the request.
 
   The `key` value is required for all calls. You can leave it as `DEMO_KEY` and the functions will still work as intended, but the API call limitations will be stricter. Otherwise, request a free API code from NASA's website and use that as the key value (recommended).
 
   #### APOD
   The `apod()` function is used to leverage the Astronomy Picture of the Day API.
 
-  The `Date` parameter specifies the date for the returned image. Date will default to `today` if empty, and is expecting the YYYY-MM-DD format.
+  The `date` parameter specifies the date for the returned image. Date will default to `today` if empty, and is expecting the value to be formatted as `YYYY-MM-DD`.
 
   You can also use `start_date` and `end_date` parameters to get a range of dates and their associated images. End date is `today` by default. 
 
   The `count` parameter is available for querying a number of random images. If you use `count` you cannot use any of the other three date parameters. 
 
-  If the picture of the day is a video, you can use the `thumbs` parameter to specify whether you want it to return a video thumbnail or not. Defaults to false. 
-
+  If the picture of the day is a video, you can use the `thumbs` parameter to specify whether you want it to return a video thumbnail or not. This parameter defaults to false.
 
   ```js
+
+  // get results for 04/20/2021 //
   const payload = {
     key: 'DEMO_KEY',
-    date: '',
-    hd: ''
+    date: '2021-04-20',
   };
 
   celestial.apod(payload, pictureOfTheDay => {
     return pictureOfTheDay;
   });
+
   ```
 
 

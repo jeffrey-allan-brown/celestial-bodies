@@ -1,3 +1,4 @@
+// import libraries //
 var gulp = require("gulp");
 var sourcemaps = require("gulp-sourcemaps");
 var babel = require("gulp-babel");
@@ -10,7 +11,6 @@ gulp.task('cleanFolders', () => {
 		'./src/assets/public/*', './dist/*'
 	]);
 });
-//
 
 // primary compile //
 gulp.task("primaryCompile", function () {
@@ -21,7 +21,7 @@ gulp.task("primaryCompile", function () {
 	.pipe(sourcemaps.write("."))
 	.pipe(gulp.dest("dist"));
   });
-//
 
 
+// run all gulp tasks //
 gulp.task('default', gulp.series('cleanFolders', 'primaryCompile'));

@@ -1,11 +1,11 @@
-const celestial = require('./index.js');
+const celestial = require('./index');
 
+// get 10 random results //
 const payload = {
-  asteroid_id: 3471590,
   key: 'DEMO_KEY',
-  type: 'browse'
+  count: 10,
 };
 
-celestial.asteroids(payload, asteroids => {
+celestial.apod(payload, asteroids => {
   console.log(asteroids);
 });
