@@ -1,11 +1,14 @@
 const celestial = require('./index');
 
-// get 10 random results //
+// get results for 04/20/2021 //
 const payload = {
+  end_date: '2021-04-27',
   key: 'DEMO_KEY',
-  count: 10,
+  start_date: '2021-04-20',
+  type: 'feed'
 };
 
-celestial.apod(payload, asteroids => {
-  console.log(asteroids);
+celestial.asteroids(payload, neows => {
+  console.log(neows)
+  return neows;
 });
