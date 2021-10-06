@@ -146,6 +146,31 @@
   });
   ```
 
+  #### DONKI
+  The `donki()` function provides access to the Space Weather Database of Notifications, Knowledge, and Information (DONKI). This API is particularly useful for space weather forecasters, scientists, and the general space science community.
+
+  The API consists of a variety of components, each providing access to different data.
+
+  ##### Coronal Mass Ejection (CME)
+
+  Coronal Mass Ejections (CMEs) are large expulsions of plasma and magnetic field from the Sun's corona. This API provides data for specific CME events in a specified time period.
+
+  The `start_date` and `end_date` parameters are optional, and if omitted from the payload the request will default to pulling the last 30 days worth of data.
+
+
+    ```js
+  const payload = {
+    start_date: '2021-01-01', // optional //
+    end_date: '2021-01-02', // optional //
+    key: 'DEMO_KEY',
+    type: 'cme'
+  };
+
+  celestial.donki(payload, cmeResponse => {
+    return cmeResponse;
+  });
+  ```
+
 
   ## Contributing
 

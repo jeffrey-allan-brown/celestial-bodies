@@ -45,4 +45,4 @@ Thumbs.db
 
 # misc
 .env
-.testing.js
+apiTesting.js
