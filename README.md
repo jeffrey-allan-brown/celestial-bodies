@@ -68,6 +68,16 @@
 
   The `key` value is required for all calls. You can leave it as `DEMO_KEY` and the functions will still work as intended, but the API call limitations will be stricter. Otherwise, request a free API code from NASA's website and use that as the key value (recommended).
 
+  Currently, Celestial Bodies has built-in functionality for:<br>
+  <a href="#apod">Astronomy Image of the Day</a><br>
+  <a href="#asteroids">Near Earth Orbit Web Service</a><br>
+  <a href="#donki">Space Weather Database of Notifications, Knowledge, and Information (DONKI)</a><br>
+  <a href="#earth">Earth - Landsat Imagery</a><br>
+
+
+
+
+
   #### APOD
   The `apod()` function is used to leverage the Astronomy Picture of the Day API.
 
@@ -92,6 +102,8 @@
   });
 
   ```
+
+
 
 
 
@@ -146,6 +158,10 @@
   });
   ```
 
+
+
+
+
   #### DONKI
   The `donki()` function provides access to the Space Weather Database of Notifications, Knowledge, and Information (DONKI). This API is particularly useful for space weather forecasters, scientists, and the general space science community.
 
@@ -157,8 +173,7 @@
 
   The `start_date` and `end_date` parameters are optional, and if omitted from the payload the request will default to pulling the last 30 days worth of data.
 
-
-    ```js
+  ```js
   const payload = {
     start_date: '2021-01-01', // optional //
     end_date: '2021-01-02', // optional //
@@ -171,6 +186,39 @@
   });
   ```
 
+  ##### Coronal Mass Ejection Analysis (CME+)
+
+  ##### Geomagnetic Storm (GST)
+
+  ##### Interplanetary Shock (IPS)
+
+  ##### Solar Flare (FLR)
+
+  ##### Solar Energetic Particle (SEP)
+
+  ##### Magnetopause Crossing (MPC)
+
+  ##### Radiation Belt Enhancement (RBE)
+
+  ##### High Speed Stream (HSS)
+
+  ##### WSA+EnlilSimulation (WSA)
+
+  ##### Notifications
+
+
+
+  #### Earth
+
+  The `earth()` function is designed to give you an easy to use taste of what Landsat imagery data can provide. There are two different types for this API - `imagery` and `assets` - which serve slightly different purposes.
+
+  ##### Imagery
+
+  This endpoint retrieves the Landsat 8 image for the supplied location and date. 
+
+  ##### Assets
+
+  This endpoint retrieves the date-times and asset names for closest available imagery for a supplied location and date.
 
   ## Contributing
 
@@ -183,7 +231,3 @@
 
   ##### Misc. Assets
   <a href="https://looka.com/">Looka</a>
-
-  ## Bonus
-
-  Please :star: the project if you enjoy it - much appreciated!
