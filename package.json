@@ -1,6 +1,6 @@
 {
   "name": "celestial-bodies",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Lightweight wrapper for interacting with NASA's API library.",
   "repository": {
     "type": "git",
