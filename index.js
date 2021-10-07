@@ -1,5 +1,5 @@
 'use strict'
 
 // export modules
-module.exports = require('./lib/apod.js')
-module.exports = require ('./lib/asteroids.js')
+module.exports = require('./dist/apod.js')
+module.exports = require('./dist/asteroids.js')
